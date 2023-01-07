@@ -18,6 +18,13 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
+        resources:
+          limits:
+            cpu: 300m
+            memory: "100Mi"
+          requests:
+            cpu: 100m
+            memory: "50Mi"
 # service type loadbalancer       
 ---
 apiVersion: v1
