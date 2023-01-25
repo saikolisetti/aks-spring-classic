@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: kaksacr12345.azurecr.io/bprasanna881/aks-spring-classic:#{Build.BuildId}#
+        image: kaksacr12345.azurecr.io/saikolisetti/aks-spring-classic:#{Build.BuildId}#
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
@@ -35,9 +35,9 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 8085
+    port: 80
     protocol: TCP
     targetPort: 8085
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: springboot-app
