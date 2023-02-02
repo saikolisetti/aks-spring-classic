@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name:  prasannaspringbootapp 
-          image: kaksacr12345.azurecr.io/bprasanna881/aks-spring-classic
+          image: k8spractice.azurecr.io/bprasanna881/aks-spring-classic
           ports:
           - containerPort: 80
