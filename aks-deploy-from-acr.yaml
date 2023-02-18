@@ -27,9 +27,9 @@ spec:
           configMap:
             name: nginx-configmap-vol
             items:
-              - key: file-1.txt
+              - key: file1.txt
                 path: file-a.txt
-              - key: file-2.txt
+              - key: file2.txt
                 path: file-b.txt
 
 # service type loadbalancer       
