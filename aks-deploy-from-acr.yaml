@@ -32,7 +32,7 @@ spec:
               - key: file2.txt
                 path: file-b.txt
 
-# service type loadbalancer       
+# service type loadbalancer  updated      
 ---
 apiVersion: v1
 kind: Service
