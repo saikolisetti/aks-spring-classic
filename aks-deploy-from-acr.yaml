@@ -14,15 +14,24 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: k8spractice.azurecr.io/saikolisetti/aks-spring-classic:#{Build.BuildId}#
+        image: nodeclassic.azurecr.io/saikolisetti/aks-spring-classic:#{Build.BuildId}#
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
-        resources:
-          limits:
-            cpu: 300m
-          requests:
-            cpu: 100m
+        volumeMounts:
+            - name: test-vol
+              mountPath: "/etc/non-sensitive-data"
+              readOnly: true
+      volumes:
+        - name: test-vol
+          configMap:
+            name: nginx-configmap-vol
+            items:
+              - key: file-1.txt
+                path: file-a.txt
+              - key: file-2.txt
+                path: file-b.txt
+
 # service type loadbalancer       
 ---
 apiVersion: v1
