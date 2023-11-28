@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+dapiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-springboot-deployment
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: saipracticeacr.azurecr.io/saikolisetti/aks-spring-classic:#{Build.BuildId}#
+        image: AKSACR1234.azurecr.io/saikolisetti/aks-spring-classic:#{Build.BuildId}#
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
