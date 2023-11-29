@@ -46,7 +46,7 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $
+          latest
     - task: CopyFiles@2
       inputs:
         Contents: 'aks-deploy-from-acr.yaml'
