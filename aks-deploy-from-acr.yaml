@@ -18,19 +18,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
-        volumeMounts:
-            - name: test-vol
-              mountPath: "/etc/non-sensitive-data"
-              readOnly: true
-      volumes:
-        - name: test-vol
-          configMap:
-            name: nginx-configmap-vol
-            items:
-              - key: file1.txt
-                path: file-a.txt
-              - key: file2.txt
-                path: file-b.txt
 
 # service type loadbalancer  updatedd      
 ---
