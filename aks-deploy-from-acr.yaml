@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: aksacr1234.azurecr.io/saikolisettiaksspringclassic:latest
+        image: myacrdev1234.azurecr.io/saikolisettiaksspringclassic:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
